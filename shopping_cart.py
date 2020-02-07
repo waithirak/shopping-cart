@@ -33,11 +33,15 @@ print(products)
 
 #Info Capture: inputs 
 
-selected_id = input("Please input a product identifier:  ")
-matching_product = [p for p in products if str(p["id"]) == str(selected_id)]
-matching_product = matching_product[0]
+while True:
+    selected_id = input("Please input a product identifier:  ")
+    matching_product = [p for p in products if str(p["id"]) == str(selected_id)]
+    matching_product = matching_product[0]
+    print("SELECTED PRODUCTS: " + matching_product["name"] +  " " + str(matching_product["price"] ))
 
-print("SELECTED PRODUCTS: " + matching_product["name"] +  " " + str(matching_product["price"] ))
+
+#works but need to loop it so we can do this process multiple time and select many products 
+#going to use a  while loop to do this 
 
 
 
