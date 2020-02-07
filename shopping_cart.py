@@ -31,6 +31,24 @@ print(products)
 # TODO: write some Python code here to produce the desired output
 
 
+#Info Capture: inputs 
+
+selected_id = input("Please input a product identifier:  ")
+print(selected_id)
+print(type(selected_id))    #this is a string value of the #
+
+
+
+
+
+
+
+
+
+
+#Info Display: outputs
+
+
 
 
 
