@@ -26,7 +26,7 @@ products = [
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 print(products)
-# pprint(products)
+
 
 # TODO: write some Python code here to produce the desired output
 
@@ -34,8 +34,25 @@ print(products)
 #Info Capture: inputs 
 
 selected_id = input("Please input a product identifier:  ")
-print(selected_id)
-print(type(selected_id))    #this is a string value of the #
+matching_product = [p for p in products if str(p["id"]) == str(selected_id)]
+matching_product = matching_product[0]
+
+print("SELECTED PRODUCTS: " + matching_product["name"] +  " " + str(matching_product["price"] ))
+
+
+
+
+
+
+#print(matching_product)
+#print(type(matching_product))
+
+
+
+
+#print(selected_id)
+#print(type(selected_id))    #this is a string value of the #
+#how to make 9 show the matching product???
 
 
 
