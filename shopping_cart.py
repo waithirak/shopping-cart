@@ -40,6 +40,11 @@ selected_ids = []
 while True:
     selected_id = input("Please input a product identifier:  ")
     if selected_id == "DONE": 
+        print("-------------------------------")
+        print("FINE FOODS GROCERY")
+        print("FIND US AT: WWW.FINE-FOODS.COM")
+        print("OR CALL US AT: (202) 452 2290")
+        print("-------------------------------")
         break
     else:
         #matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
@@ -67,7 +72,11 @@ for selected_id in selected_ids:
 #NOW TIME TO KEEP RUNNING LIST 
 #Info Display: outputs
 
-print("TOTAL PRICE: " + str(total_price))
+print("SUBTOTAL: " + str(total_price))
+print("TAX: ")
+print ("TOTAL: ") 
+print("--------------------------------:")
+print("THANK YOU FOR SHOPPING AT FINE FOODS")
 
 
 
