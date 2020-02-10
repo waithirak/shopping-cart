@@ -1,5 +1,6 @@
 # shopping_cart.py
-
+import datetime
+#date idea source: https://docs.python.org/3/library/datetime.html 
 #from pprint import pprint
 
 products = [
@@ -45,12 +46,11 @@ while True:
         print("FIND US AT: WWW.FINE-FOODS.COM")
         print("OR CALL US AT: (202) 452 2290")
         print("-------------------------------")
+        print("CHECKEDOUT AT: ")
+        now = datetime.datetime.now()
+        print(now.strftime("%m/%d/%Y  %H:%M"))
         break
     else:
-        #matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        #matching_product = matching_products[0]
-        #total_price = total_price + matching_product ["price"]
-        #print("SELECTED PRODUCTS: " + matching_product["name"] +  " " + str(matching_product["price"] ))
         selected_ids.append(selected_id)
 
 
@@ -61,20 +61,20 @@ for selected_id in selected_ids:
         total_price = total_price + matching_product ["price"]
         print("SELECTED PRODUCTS: " + matching_product["name"] +  " " + str(matching_product["price"] ))
 
+sales_tax = float(total_price * 0.0875)
+#generally tax = rate * total sales 
+#so maybe just concatonate??
+sum = float(total_price * 0.0875) + float(total_price)
 
-
-#works but need to loop it so we can do this process multiple time and select many products 
-#going to use a  while loop to do this 
-#need to end this loop so you can choose done
+#going to use a  while loop to do this so we can choose done
 #INPUTS DONE 
-
 
 #NOW TIME TO KEEP RUNNING LIST 
 #Info Display: outputs
 
 print("SUBTOTAL: " + str(total_price))
-print("TAX: ")
-print ("TOTAL: ") 
+print("SALES TAX: " + str(sales_tax))
+print ("TOTAL: " + str(sum))
 print("--------------------------------:")
 print("THANK YOU FOR SHOPPING AT FINE FOODS")
 
