@@ -43,21 +43,25 @@ selected_ids = []
 while True:
     selected_id = input("Please input a product identifier:  ")
     if selected_id == "DONE": 
-        print("-------------------------------")
-        print("FINE FOODS GROCERY")
-        print("FIND US AT: WWW.FINE-FOODS.COM")
-        print("OR CALL US AT: (202) 452 2290")
-        print("-------------------------------")
-        print("CHECKEDOUT AT: ")
-        now = datetime.datetime.now()
-        print(now.strftime("%m/%d/%Y  %H:%M"))          #SEE TOP IMPORT FOR SOURCE
-        print("-------------------------------")
         break
+    elif int(selected_id)> 20:
+        print("ARE YOU SURE THIS IS A VALID PRODUCT IDENTIFIER? PLEASE TRY AGAIN")
+        next
     else:
         selected_ids.append(selected_id)
 
 
-       # print(selected_ids)
+
+print("-------------------------------")
+print("FINE FOODS GROCERY")
+print("FIND US AT: WWW.FINE-FOODS.COM")
+print("OR CALL US AT: (202) 452 2290")
+print("-------------------------------")
+print("CHECKEDOUT AT: ")
+now = datetime.datetime.now()
+print(now.strftime("%m/%d/%Y  %H:%M"))          #SEE TOP IMPORT FOR SOURCE
+print("-------------------------------")
+
 for selected_id in selected_ids: 
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         matching_product = matching_products[0]
@@ -79,6 +83,7 @@ print("--------------------------------")
 print("THANK YOU FOR SHOPPING AT FINE FOODS")
 print("                                      ")
 # i just need space between the end of this code and the next command so thats why theres an empty print()
+
 
 
 #REQUIREMENTS:
