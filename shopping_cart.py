@@ -29,11 +29,7 @@ products = [
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 #print(products)
-
-
 # TODO: write some Python code here to produce the desired output
-
-
 #Info Capture: inputs 
 
 total_price = 0
@@ -45,7 +41,7 @@ while True:
     if selected_id == "DONE": 
         break
     elif int(selected_id)> 20:
-        print("ARE YOU SURE THIS IS A VALID PRODUCT IDENTIFIER? PLEASE TRY AGAIN")
+        print("ARE YOU SURE THIS IS A VALID PRODUCT IDENTIFIER? PLEASE TRY AGAIN.")
         next
     else:
         selected_ids.append(selected_id)
@@ -57,7 +53,7 @@ print("FINE FOODS GROCERY")
 print("FIND US AT: WWW.FINE-FOODS.COM")
 print("OR CALL US AT: (202) 452 2290")
 print("-------------------------------")
-print("CHECKEDOUT AT: ")
+print("CHECKOUT AT: ")
 now = datetime.datetime.now()
 print(now.strftime("%m/%d/%Y  %H:%M"))          #SEE TOP IMPORT FOR SOURCE
 print("-------------------------------")
@@ -75,12 +71,13 @@ sum = float(total_price * 0.0875) + float(total_price)
 
 
 #Info Display: outputs
-
+print("                                    ")
+print("------------------------------------")
 print("SUBTOTAL: " + '${:,.2f}'.format(total_price))    #USD SOURCE AT THE TOP
 print("SALES TAX: " + '${:,.2f}'.format(sales_tax))
 print ("TOTAL: " + '${:,.2f}'.format(sum))
 print("--------------------------------")
-print("THANK YOU FOR SHOPPING AT FINE FOODS")
+print("THANK YOU FOR SHOPPING AT FINE FOODS!")
 print("                                      ")
 # i just need space between the end of this code and the next command so thats why theres an empty print()
 
