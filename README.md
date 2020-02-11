@@ -7,13 +7,16 @@
 
 #Clone from GitHub https://github.com/waithirak/shopping-cart 
 
-#Navigate from the command line cd shopping-cart 
+#Navigate from the command line cd ~/Desktop/shopping-cart
+ 
 
  ## Set Up
 
- #virtual environment
-    #create a shopping-env with conda create -n shopping-env python=3.7
-    #activate it with conda activate shopping-env
+#virtual environment
+
+#create a shopping-env with conda create -n shopping-env python=3.7
+
+#activate it with conda activate shopping-env
 
 ## Usage 
 
